@@ -1,0 +1,2 @@
+class NetasController < ApplicationController
+end
