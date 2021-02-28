@@ -10,6 +10,55 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class = "container">
+      <div class = "inner">
+        <header class = "header">
+          <div class = "header_inner">
+            <h1 class = "title"><a href="/">Crafters</a></h1>
+            <div class = "navigation">
+              <input id = "nav_input" type="checkbox" class="nav_hidden"> 
+              <label id = "menubtn" for = "nav_input">
+                  <div class = "navigation_icon">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </div>
+              </label>
+              <div class = "navigation_content">
+                  <ul>
+                    <li>
+                      <a href = "/">TOP</a>
+                    </li>
+                    <li>
+                      <dl class = "navigation_content_listner">
+                        <dt>リスナー</dt>
+                        <dd><a href = "">新規登録</a></dd> <!--サインアップ-->
+                        <dd><a href = "">ログイン</a></dd> <!--サインイン-->
+                      </dl>
+                    </li> 
+                    <li>
+                      <dl class = "navigation_content_search">
+                        <dt>検索</dt>
+                        <dd><a href = "">番組検索</a></dd> <!--サインアップ-->
+                        <dd><a href = "">リスナー検索</a></dd> <!--サインイン-->
+                      </dl>
+                    </li>
+                    <li>
+                      <a href = "/">ネタメールを投稿する</a><!--投稿-->
+                    </li>
+                  </ul>
+              </div>
+            </div>
+          </div>
+        </header>
+        <%= yield %>
+      </div>
+    </div>
+    
+    
+    <footer class = "footer">
+      <p class = "copy_right">© 2021 Crafters</p>
+    </footer>
+    
   </body>
 </html>
