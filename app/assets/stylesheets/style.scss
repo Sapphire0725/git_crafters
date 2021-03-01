@@ -1,0 +1,286 @@
+*{  
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; // 	要素の枠線も含めたサイズになる
+	list-style-type: none; // 	ulやolタグの点や数字を消す
+	text-decoration: none; // 	テキストの下線等を消す
+}
+
+// header
+.inner{
+  margin: 0 auto;
+  max-width: 1600px;
+  padding: 0 30px;
+}
+
+.header{
+  position: relative;
+  border-bottom: 1px solid #f2f2f2;
+  height: 70px;
+  z-index: 200;
+  width: 100%;
+}
+
+.header_inner{
+  position: fixed;
+  height: 70px;
+  width: 100%;
+  left: 0;
+  top: 0;
+  transition: top .5s;
+  background-color:white;
+  display: flex;
+}
+
+.title{
+  width: 172px;
+  margin: 0 auto;
+  height: 70px;
+  position: relative;
+  text-align: center;
+}
+
+.title a{
+  display: block;
+  width: 172px;
+  margin: 0 auto;
+  color:#000;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%)
+}
+
+
+.nav_hidden{
+  display: none;
+}
+
+.navigation_icon{
+  margin-right: 37px;
+  z-index: 101;
+  display: block;
+  position: relative;
+  width: 20px;
+  height: 24px;
+  cursor: pointer;
+  text-align: center;
+  transform: translate(0, +100%)
+}
+
+.navigation_icon span{
+  display: block;
+  position: absolute;
+  width: 20px;
+  border-bottom: 2px solid #000;
+  transition: .1s ease-in-out;
+  left: 0;
+}
+.navigation_icon span:first-child {top: 4px;}
+.navigation_icon span:nth-child(2) {top: 10px;}
+.navigation_icon span:nth-child(3) {top: 16px;}
+
+#nav_input:checked ~.navigation_icon span:first-child{
+  top: 10px;
+  transform: rotate(-45deg)
+}
+
+#nav_input:checked ~.navigation_icon span:nth-child(2) , #nav_input:checked ~.navigation_icon span:nth-child(3){
+  top: 10px;
+  transform: rotate(45deg);
+}
+
+.navigation_content{
+  display: block;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  background: #f1f1f1;
+  transition: all .4s;
+  width: 330px;
+  height: 100vh;
+  transform: translateX(+100%)
+}
+#nav_input:checked ~.navigation_content{
+  transform: translateX(0%)
+}
+
+.navigation_content a{
+  color: black;
+  cursor: pointer;
+  display: block;
+  font-size: 16px;
+  line-height: 400%;
+}
+
+.navigation ul{
+  padding-left: 100px;
+  padding-top: 100px;
+}
+
+dt{
+  display: block;
+  font-size: 16px;
+  line-height: 400%;
+}
+
+dd{
+  margin-left: 10px;
+  border-left: 1px solid #ccc;
+}
+
+dd a{
+  padding-left: 12px;
+  line-height: 2.5;
+}
+
+// footer
+.footer{
+  padding: 19px 0 45px;
+  border-top: 1px solid #f2f2f2;
+  text-align: center;
+}
+
+.copy_right{
+  color: #999;
+  font-size: .8rem;
+  line-height: 1;
+}
+
+// index
+.top_banner{
+  position: relative;
+}
+
+.top_banner .catch{
+  position: absolute;
+  color: white;
+  top: 50px;
+  left: 50px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.top_popular{
+  border-top: 1px solid #f2f2f2;
+  padding: 50px 0 0;
+}
+
+.top_popular_title{
+  padding: 18px 0 0 25px;
+  margin-bottom: 30px;
+}
+
+.top_popular_lists{
+  border-bottom: 1px solid #f2f2f2;
+  display: flex;
+}
+
+.top_popular_item{
+  display: block;
+  position: relative;
+  border-left: 1px solid #f2f2f2;
+  margin: 0 0 40px;
+  flex-basis: 20%;
+}
+
+.top_popular_item a{
+  text-decoration: none;
+  padding: 0 25px 12px;
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+}
+
+.top_popular_img{
+  display: inline-block;
+  width: 100%;
+  margin-bottom: 40px;
+  object-fit: cover;
+}
+
+.top_popular_item_name{
+  margin-bottom: 25px;
+}
+
+.top_popular_more{
+  text-align: center;
+  padding-top: 28px;
+  padding-bottom: 29px;
+}
+
+.more_btn{
+  padding: 8px 23px;
+  border: 1px solid #00f;
+  color: #00f;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+}
+
+.neta{
+  display: flex;
+  padding: 0 0 12px 0;
+}
+
+.listener_info_box{
+  width: 20%;
+  border: 1px solid #f2f2f2;
+}
+
+.listener_info_box a{
+  display: block;
+  padding: 0 25px 12px;
+  text-align: center;
+  color: black;
+}
+
+.listener_image{
+  text-align: center;
+}
+
+.listener_name{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.neta_box{
+  width: 80%;
+  border: 1px solid #f2f2f2;
+}
+
+.neta_box_inner{
+  display: block;
+  padding: 0 25px 12px;
+}
+
+.date{
+  color: #999;
+}
+
+.program{
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.neta_text_box{
+  padding: 12px;
+  background-color: #F0F1DF;
+  height: 100%;
+  display: flex;
+}
+
+.neta_text{
+  display: block;
+  width: 90%;
+}
+
+.evaluation{
+  padding: 12px 0 0 0;
+  width: 10%;
+  text-align: right;
+}
+
+.good{
+  font-size: 12px;
+}

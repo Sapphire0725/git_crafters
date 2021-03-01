@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class NetasControllerTest < ActionDispatch::IntegrationTest
+class NetumTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end
