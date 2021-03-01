@@ -150,6 +150,10 @@ dd a{
 // index
 .top_banner{
   position: relative;
+  width: 100%;
+  height: 500px;
+  border: 1px solid #f2f2f2;
+  background-color: #8b4513;
 }
 
 .top_banner .catch{
@@ -197,7 +201,9 @@ dd a{
   display: inline-block;
   width: 100%;
   margin-bottom: 40px;
-  object-fit: cover;
+  
+  height: 150px;
+  background-color: #e0ffff;
 }
 
 .top_popular_item_name{
@@ -237,6 +243,12 @@ dd a{
 
 .listener_image{
   text-align: center;
+  
+  padding: 0 25px;
+  width: 100%;
+  height: 150px;
+  border: 1px solid #f2f2f2;
+  background-color: #e0ffff;
 }
 
 .listener_name{
