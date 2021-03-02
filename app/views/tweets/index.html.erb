@@ -132,31 +132,34 @@
 <h2 class = "top_popular_title">
   新着ネタメール
 </h2>
-<section class = "neta">
-  <div class = "listener_info_box">
-    <a href = "/">
-      <div class = "listener_image">
-        <!--imgタグ-->
-      </div>
-      <p class = "listener_name">リスナー1 さん</p>
-      <p class = "listener_info">男性 | 25歳 | 東京都</p>
-    </a>
-  </div>
-  <div class = "neta_box">
-    <div class = "neta_box_inner">
-      <p class = "date">2021年3月1日 投稿</p>
-      <p class = "program">番組名1</p>
-      <p class = "corner">コーナー:コーナー名1</p>
-      <p class = "theme">テーマ:テーマ名1</p>
-      <div class = "neta_text_box">
-        <p class = "neta_text">
-        あああああああああああああああ
-        </p>
-        <div class = "evaluation">
-          <%= image_tag 'good_icon.png' ,width: '30%', height: '60%' %>
-          <p class = "good">いいね</p>
+
+<% @tweets.each do |tweet| %>
+  <section class = "neta">
+    <div class = "listener_info_box">
+      <a href = "/">
+        <div class = "listener_image">
+          <!--imgタグ-->
+        </div>
+        <p class = "listener_name"><%= tweet.listener_name %></p>
+        <p class = "listener_info"><%= tweet.listener_sex %> | <%= tweet.listener_age %>歳 | <%= tweet.listener_address %></p>
+      </a>
+    </div>
+    <div class = "neta_box">
+      <div class = "neta_box_inner">
+        <p class = "date">2021年3月1日 投稿</p>
+        <p class = "program"><%= tweet.program_name %></p>
+        <p class = "corner">コーナー:<%= tweet.corner_name %></p>
+        <p class = "theme">テーマ:<%= tweet.theme %></p>
+        <div class = "neta_text_box">
+          <p class = "neta_text">
+            <%= tweet.text %>
+          </p>
+          <div class = "evaluation">
+            <%= image_tag 'good_icon.png' ,width: '30%', height: '60%' %>
+            <p class = "good">いいね</p>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+<% end %>
