@@ -1,0 +1,26 @@
+<div class = "new_form">
+  <div class = "new_form_inner">
+    <%= form_tag('/tweets', method: :post) do %>
+      <h3>
+        投稿する
+      </h3>
+      <div class = "new_form_box">
+        <ul>
+          <li class = "new_form_program">
+            <input type="text" name="program" placeholder="番組">
+          </li>
+          <li class = "new_form_program">
+            <input type="text" name="corner" placeholder="コーナー">
+          </li>
+          <li class = "new_form_program">
+            <input type="text" name="theme" placeholder="テーマ">
+          </li>
+          <li class = "new_form_program">
+            <textarea name="text" placeholder="text" rows="10"></textarea>
+          </li>
+        </ul>
+      </div>
+      <input type="submit" value="SEND">
+    <% end %>
+  </div>
+</div>

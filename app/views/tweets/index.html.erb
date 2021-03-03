@@ -132,7 +132,6 @@
 <h2 class = "top_popular_title">
   新着ネタメール
 </h2>
-
 <% @tweets.each do |tweet| %>
   <section class = "neta">
     <div class = "listener_info_box">
@@ -158,8 +157,7 @@
             <%= image_tag 'good_icon.png' ,width: '30%', height: '60%' %>
             <p class = "good">いいね</p>
           </div>
-        </div>
       </div>
     </div>
-  </section>
-<% end %>
+  </div>
+</section>
