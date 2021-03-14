@@ -128,7 +128,7 @@ dd{
   border-left: 1px solid #ccc;
 }
 
-dd a{
+dd .post{
   padding-left: 12px;
   line-height: 2.5;
 }
@@ -315,9 +315,18 @@ dd a{
   margin: 0 auto;
 }
 
-.new_form_program{
+.new_form_field{
   padding: 12px 0;
 }
+
+.new_form_text{
+  padding: 12px 0;
+  width: 100%;
+}
+
+// .new_form_text_inner{
+//   border: 1px solid #000;
+// }
 
 input[type="text"]{
   width: 100%;
@@ -325,11 +334,71 @@ input[type="text"]{
 }
 
 textarea[name="text"]{
-  width: 100%;
   height: 300px;
+  width: 100%;
+  resize: none;
 }
 
 input[type="submit"]{
   width: 50px;
   height: 20px;
 }
+
+// devise_new
+.sign_up_form{
+  width: 800px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: #f5f5f5;
+  position: relative;
+}
+
+.sign_up_form_inner{
+  width: 700px;
+  margin: 50px;
+  position: absolute;
+}
+
+.sign_up_title{
+  text-align: center;
+}
+
+.user_infomation_field{
+  display: flex;
+  width: 100%;
+  padding: 30px 0 0 0;
+}
+
+.user_address{
+  display: flex;
+  padding: 0 100px 0 0;
+}
+
+.address_field{
+}
+
+.user_age{
+  display: flex;
+  padding: 0 100px 0 0;
+}
+
+.user_sex{
+  display: flex;
+}
+
+.field{
+  padding: 20px 0 0 0;
+}
+
+.field_box{
+  width: 700px;
+  height: 30px;
+}
+
+.action{
+  padding: 50px 0 0 0;
+  width: 50px;
+  height: 20px;
+  margin: 0 auto;
+}
+

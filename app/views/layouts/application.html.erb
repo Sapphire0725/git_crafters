@@ -32,19 +32,26 @@
                     <li>
                       <dl class = "navigation_content_listner">
                         <dt>リスナー</dt>
-                        <dd><a href = "">新規登録</a></dd> <!--サインアップ-->
-                        <dd><a href = "">ログイン</a></dd> <!--サインイン-->
+                        <% if user_signed_in? %>
+                          <dd><%= link_to "マイページ", "/", class: "post" %></dd>
+                          <dd><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "post" %></dd>
+                        <% else %>
+                          <dd><%= link_to "新規登録", new_user_registration_path, class: "post" %></dd> 
+                          <dd><%= link_to "ログイン", new_user_session_path, class: "post" %></dd> 
+                        <% end %>
                       </dl>
                     </li> 
                     <li>
                       <dl class = "navigation_content_search">
                         <dt>検索</dt>
-                        <dd><a href = "">番組検索</a></dd> <!--サインアップ-->
-                        <dd><a href = "">リスナー検索</a></dd> <!--サインイン-->
+                        <dd><a href = "" class= "post">番組検索</a></dd> <!--サインアップ-->
+                        <dd><a href = "" class= "post">リスナー検索</a></dd> <!--サインイン-->
                       </dl>
                     </li>
                     <li>
-                      <a href = "/">ネタメールを投稿する</a><!--投稿-->
+                      <dt>
+                        <%= link_to "ネタメールを投稿する", new_tweet_path, class: "post" %>
+                      </dt>
                     </li>
                   </ul>
               </div>
